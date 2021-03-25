@@ -1,0 +1,52 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<Pane fx:controller="gui.GuiController"
+      xmlns:fx="http://javafx.com/fxml">
+    <GridPane fx:id="brickPanel" vgap="1" hgap="1"/>
+    <BorderPane styleClass="gameBoard">
+        <center>
+            <GridPane fx:id="gamePanel" />
+        </center>
+    </BorderPane>
+    <VBox layoutX="243" layoutY="20" alignment="CENTER">
+
+        <VBox alignment="CENTER">
+            <Label text="Score:" styleClass="scoreClass"/>
+            <Text text="text" styleClass="scoreClass" />
+        </VBox>
+
+        <Button text = "New Game" styleClass="ipad-dark-grey"/>
+        <ToggleButton text="Pause" styleClass="ipad-dark-grey"/>
+
+
+
+        <VBox fx:id="helpBox">
+
+            <Text styleClass="helpInfo" wrappingWidth="150">
+                <![CDATA[
+                Use arrow keys (←, ↑, →, ↓) or (A,S,D,W) keys for movement and rotating.
+                ]]>
+            </Text>
+            <Text styleClass="helpInfo" wrappingWidth="150">
+                <![CDATA[
+                N - start new game.
+                ]]>
+            </Text>
+            <Text styleClass="helpInfo" wrappingWidth="150">
+                <![CDATA[
+                P - pause/resume.
+                ]]>
+            </Text>
+
+        </VBox>
+    </VBox>
+
+
+
+    <stylesheets>
+        <URL value="@window_style.css"/>
+    </stylesheets>
+</Pane>
